@@ -24,3 +24,16 @@ rover supergraph compose --config ./supergraph-config.yaml > supergraph.graphql
 ```
 node index.js
 ```
+
+### 5. Try a query
+```graphql
+# Write your query or mutation here
+query {
+  books {
+    title
+    publisher {
+      name
+    }
+  }
+}
+```
