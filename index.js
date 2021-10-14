@@ -1,23 +1,3 @@
-// DD INIT - start
-const httpServerOptions = {
-    middleware: false,
-};
-const graphqlOptions = {
-    depth: 2,
-    collapse: true,
-    signature: false
-};
-const tracer = require('dd-trace');
-tracer.init({
-    plugins: false
-});
-tracer.use('http', {
-    server: httpServerOptions,
-});
-tracer.use('express', httpServerOptions);
-tracer.use('graphql', graphqlOptions);
-// DD INIT - end
-
 const {ApolloServer} = require('apollo-server');
 const {ApolloGateway} = require('@apollo/gateway');
 
